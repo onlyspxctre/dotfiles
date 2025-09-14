@@ -1,0 +1,14 @@
+[user]
+	name = onlyspxctre
+	email = onlyspxctre@proton.me
+	signingkey = ~/.ssh/id_ed25519.pub
+[commit]
+	gpgsign = true
+[safe]
+	directory = *
+[gpg]
+	format = ssh
+[credential]
+	helper = cache --timeout=600
+[advice]
+	defaultBranchName = false

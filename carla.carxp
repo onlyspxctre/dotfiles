@@ -1,0 +1,826 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE CARLA-PROJECT>
+<CARLA-PROJECT VERSION='2.5'>
+ <EngineSettings>
+  <ForceStereo>false</ForceStereo>
+  <PreferPluginBridges>false</PreferPluginBridges>
+  <PreferUiBridges>true</PreferUiBridges>
+  <UIsAlwaysOnTop>false</UIsAlwaysOnTop>
+  <MaxParameters>200</MaxParameters>
+  <UIBridgesTimeout>4000</UIBridgesTimeout>
+ </EngineSettings>
+
+ <Transport>
+  <BeatsPerMinute>120</BeatsPerMinute>
+ </Transport>
+
+ <!-- x42-eq - Parametric Equalizer Stereo -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>x42-eq - Parametric Equalizer Stereo</Name>
+   <URI>http://gareus.org/oss/lv2/fil4#stereo</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x0</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Enable</Name>
+    <Symbol>enable</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Gain</Name>
+    <Symbol>gain</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Reset Peak Hold</Name>
+    <Symbol>peakreset</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>Highpass</Name>
+    <Symbol>HighPass</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>Highpass Frequency</Name>
+    <Symbol>HPfreq</Symbol>
+    <Value>20</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>Highpass Resonance</Name>
+    <Symbol>HPQ</Symbol>
+    <Value>0.699999988079071</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>Lowpass</Name>
+    <Symbol>LowPass</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>Lowpass Frequency</Name>
+    <Symbol>LPfreq</Symbol>
+    <Value>20000</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>9</Index>
+    <Name>Lowpass Resonance</Name>
+    <Symbol>LPQ</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>10</Index>
+    <Name>Lowshelf</Name>
+    <Symbol>LSsec</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>Lowshelf Frequency</Name>
+    <Symbol>LSfreq</Symbol>
+    <Value>80</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>Lowshelf Bandwidth</Name>
+    <Symbol>LSq</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>Lowshelf Gain</Name>
+    <Symbol>LSgain</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>14</Index>
+    <Name>Section 1</Name>
+    <Symbol>sec1</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>15</Index>
+    <Name>Frequency 1</Name>
+    <Symbol>freq1</Symbol>
+    <Value>70.4397354125977</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>16</Index>
+    <Name>Bandwidth 1</Name>
+    <Symbol>q1</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>17</Index>
+    <Name>Gain 1</Name>
+    <Symbol>gain1</Symbol>
+    <Value>18</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>18</Index>
+    <Name>Section 2</Name>
+    <Symbol>sec2</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>19</Index>
+    <Name>Frequency 2</Name>
+    <Symbol>freq2</Symbol>
+    <Value>397.000030517578</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>20</Index>
+    <Name>Bandwidth 2</Name>
+    <Symbol>q2</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>21</Index>
+    <Name>Gain 2</Name>
+    <Symbol>gain2</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>22</Index>
+    <Name>Section 3</Name>
+    <Symbol>sec3</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>23</Index>
+    <Name>Frequency 3</Name>
+    <Symbol>freq3</Symbol>
+    <Value>1250.00012207031</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>24</Index>
+    <Name>Bandwidth 3</Name>
+    <Symbol>q3</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>25</Index>
+    <Name>Gain 3</Name>
+    <Symbol>gain3</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>26</Index>
+    <Name>Section 4</Name>
+    <Symbol>sec4</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>27</Index>
+    <Name>Frequency 4</Name>
+    <Symbol>freq4</Symbol>
+    <Value>2500.00024414062</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>28</Index>
+    <Name>Bandwidth 4</Name>
+    <Symbol>q4</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>29</Index>
+    <Name>Gain 4</Name>
+    <Symbol>gain4</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>30</Index>
+    <Name>Highshelf</Name>
+    <Symbol>HSsec</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>31</Index>
+    <Name>Highshelf Frequency</Name>
+    <Symbol>HSfreq</Symbol>
+    <Value>5033.4755859375</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>32</Index>
+    <Name>Highshelf Bandwidth</Name>
+    <Symbol>HSq</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>33</Index>
+    <Name>Highshelf Gain</Name>
+    <Symbol>HSgain</Symbol>
+    <Value>18</Value>
+   </Parameter>
+
+   <CustomData>
+    <Type>http://kxstudio.sf.net/ns/carla/property</Type>
+    <Key>CarlaSkinIsCompacted</Key>
+    <Value>false</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#Float</Type>
+    <Key>http://gareus.org/oss/lv2/fil4#dbscale</Key>
+    <Value>AADwQQ==</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#Float</Type>
+    <Key>http://gareus.org/oss/lv2/fil4#fftgain</Key>
+    <Value>AAAAAA==</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#Float</Type>
+    <Key>http://gareus.org/oss/lv2/fil4#uiscale</Key>
+    <Value>AAAAQA==</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#Float</Type>
+    <Key>http://gareus.org/oss/lv2/fil4#kbtuning</Key>
+    <Value>AADcQw==</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#Int</Type>
+    <Key>http://gareus.org/oss/lv2/fil4#fftmode</Key>
+    <Value>ARIAAA==</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#Int</Type>
+    <Key>http://gareus.org/oss/lv2/fil4#fftchannel</Key>
+    <Value>/////w==</Value>
+   </CustomData>
+  </Data>
+ </Plugin>
+
+ <!-- x42-dpl - Digital Peak Limiter Stereo -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>x42-dpl - Digital Peak Limiter Stereo</Name>
+   <URI>http://gareus.org/oss/lv2/dpl#stereo</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x1</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Enable</Name>
+    <Symbol>enable</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Input Gain</Name>
+    <Symbol>gain</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Threshold</Name>
+    <Symbol>threshold</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Release Time</Name>
+    <Symbol>release</Symbol>
+    <Value>0.00999999977648258</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>True Peak</Name>
+    <Symbol>truepeak</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <CustomData>
+    <Type>http://kxstudio.sf.net/ns/carla/property</Type>
+    <Key>CarlaSkinIsCompacted</Key>
+    <Value>false</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#Float</Type>
+    <Key>http://gareus.org/oss/lv2/dpl#uiscale</Key>
+    <Value>AAAAQA==</Value>
+   </CustomData>
+  </Data>
+ </Plugin>
+
+ <!-- x42-comp - Dynamic Compressor Stereo -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>x42-comp - Dynamic Compressor Stereo</Name>
+   <URI>http://gareus.org/oss/lv2/darc#stereo</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x0</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Enable</Name>
+    <Symbol>enable</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Hold</Name>
+    <Symbol>hold</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Input Gain</Name>
+    <Symbol>inputgain</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Threshold</Name>
+    <Symbol>threshold</Symbol>
+    <Value>-10</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>Ratio</Name>
+    <Symbol>Ratio</Symbol>
+    <Value>0.754615426063538</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>Attack Time</Name>
+    <Symbol>attack</Symbol>
+    <Value>0.0019952617585659</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>Release Time</Name>
+    <Symbol>release</Symbol>
+    <Value>0.0789080411195755</Value>
+   </Parameter>
+
+   <CustomData>
+    <Type>http://kxstudio.sf.net/ns/carla/property</Type>
+    <Key>CarlaSkinIsCompacted</Key>
+    <Value>false</Value>
+   </CustomData>
+  </Data>
+ </Plugin>
+
+ <!-- LSP Gate Stereo -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>LSP Gate Stereo</Name>
+   <URI>http://lsp-plug.in/plugins/lv2/gate_stereo</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <DryWet>0</DryWet>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x1</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Enabled</Name>
+    <Symbol>enabled</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Input gain</Name>
+    <Symbol>g_in</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Output gain</Name>
+    <Symbol>g_out</Symbol>
+    <Value>1.18849921226501</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Show mix overlay</Name>
+    <Symbol>showmx</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>Show sidechain overlay</Name>
+    <Symbol>showsc</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>Pause graph analysis</Name>
+    <Symbol>pause</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>Clear graph analysis</Name>
+    <Symbol>clear</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>Stereo split</Name>
+    <Symbol>ssplit</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>Split sidechain source</Name>
+    <Symbol>sscs</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>9</Index>
+    <Name>Sidechain input</Name>
+    <Symbol>sci</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>10</Index>
+    <Name>Sidechain mode</Name>
+    <Symbol>scm</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>Sidechain lookahead</Name>
+    <Symbol>sla</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>Sidechain listen</Name>
+    <Symbol>scl</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>Sidechain source</Name>
+    <Symbol>scs</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>14</Index>
+    <Name>Sidechain reactivity</Name>
+    <Symbol>scr</Symbol>
+    <Value>10</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>15</Index>
+    <Name>Sidechain preamp</Name>
+    <Symbol>scp</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>16</Index>
+    <Name>High-pass filter mode</Name>
+    <Symbol>shpm</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>17</Index>
+    <Name>High-pass filter frequency</Name>
+    <Symbol>shpf</Symbol>
+    <Value>10</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>18</Index>
+    <Name>Low-pass filter mode</Name>
+    <Symbol>slpm</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>19</Index>
+    <Name>Low-pass filter frequency</Name>
+    <Symbol>slpf</Symbol>
+    <Value>20000</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>20</Index>
+    <Name>Hysteresis</Name>
+    <Symbol>gh</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>21</Index>
+    <Name>Curve threshold</Name>
+    <Symbol>gt</Symbol>
+    <Value>0.0153680173680186</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>22</Index>
+    <Name>Curve zone size</Name>
+    <Symbol>gz</Symbol>
+    <Value>0.501179993152618</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>23</Index>
+    <Name>Hysteresis threshold</Name>
+    <Symbol>ht</Symbol>
+    <Value>0.251190006732941</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>24</Index>
+    <Name>Hysteresis zone size</Name>
+    <Symbol>hz</Symbol>
+    <Value>0.501179993152618</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>25</Index>
+    <Name>Attack</Name>
+    <Symbol>at</Symbol>
+    <Value>0.000102272664662451</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>26</Index>
+    <Name>Release</Name>
+    <Symbol>rt</Symbol>
+    <Value>100.000007629395</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>27</Index>
+    <Name>Hold time</Name>
+    <Symbol>hold</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>28</Index>
+    <Name>Reduction</Name>
+    <Symbol>gr</Symbol>
+    <Value>0.0978899300098419</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>29</Index>
+    <Name>Makeup gain</Name>
+    <Symbol>mk</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>30</Index>
+    <Name>Dry gain</Name>
+    <Symbol>cdr</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>31</Index>
+    <Name>Wet gain</Name>
+    <Symbol>cwt</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>32</Index>
+    <Name>Dry/Wet balance</Name>
+    <Symbol>cdw</Symbol>
+    <Value>100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>36</Index>
+    <Name>Sidechain level visibility Left</Name>
+    <Symbol>slv_l</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>37</Index>
+    <Name>Envelope level visibility Left</Name>
+    <Symbol>elv_l</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>38</Index>
+    <Name>Gain reduction visibility Left</Name>
+    <Symbol>grv_l</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>39</Index>
+    <Name>Input level visibility Left</Name>
+    <Symbol>ilv_l</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>40</Index>
+    <Name>Output level visibility Left</Name>
+    <Symbol>olv_l</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>47</Index>
+    <Name>Sidechain level visibility Right</Name>
+    <Symbol>slv_r</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>48</Index>
+    <Name>Envelope level visibility Right</Name>
+    <Symbol>elv_r</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>49</Index>
+    <Name>Gain reduction visibility Right</Name>
+    <Symbol>grv_r</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>50</Index>
+    <Name>Input level visibility Right</Name>
+    <Symbol>ilv_r</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>51</Index>
+    <Name>Output level visibility Right</Name>
+    <Symbol>olv_r</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>http://lsp-plug.in/plugins/lv2/gate_stereo/ports#link</Key>
+    <Value></Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://kxstudio.sf.net/ns/carla/property</Type>
+    <Key>CarlaSkinIsCompacted</Key>
+    <Value>true</Value>
+   </CustomData>
+  </Data>
+ </Plugin>
+
+ <ExternalPatchbay>
+  <Connection>
+   <Source>HyperX QuadCast Analog Stereo:capture_FL</Source>
+   <Target>Carla:audio-in1</Target>
+  </Connection>
+  <Connection>
+   <Source>HyperX QuadCast Analog Stereo:capture_FR</Source>
+   <Target>Carla:audio-in2</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:audio-out1</Source>
+   <Target>input-ultimate Audio/Source/Virtual sink:input_FL</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:audio-out2</Source>
+   <Target>input-ultimate Audio/Source/Virtual sink:input_FR</Target>
+  </Connection>
+  <Connection>
+   <Source>output-ultimate Audio/Sink sink:monitor_FL</Source>
+   <Target>Family 17h/19h/1ah HD Audio Controller Headphones:playback_FL</Target>
+  </Connection>
+  <Connection>
+   <Source>output-ultimate Audio/Sink sink:monitor_FR</Source>
+   <Target>Family 17h/19h/1ah HD Audio Controller Headphones:playback_FR</Target>
+  </Connection>
+  <Connection>
+   <Source>input-ultimate Audio/Source/Virtual sink:capture_FL</Source>
+   <Target>Family 17h/19h/1ah HD Audio Controller Headphones:playback_FL</Target>
+  </Connection>
+  <Connection>
+   <Source>input-ultimate Audio/Source/Virtual sink:capture_FR</Source>
+   <Target>Family 17h/19h/1ah HD Audio Controller Headphones:playback_FR</Target>
+  </Connection>
+  <Positions>
+   <Position x1="1527" y1="1055">
+    <Name>Carla</Name>
+   </Position>
+   <Position x1="1150" y1="1031" x2="781" y2="840">
+    <Name>HyperX QuadCast Analog Stereo</Name>
+   </Position>
+   <Position x1="1203" y1="1247" x2="2190" y2="1269">
+    <Name>Family 17h/19h/1ah HD Audio Controller Digital Microphone</Name>
+   </Position>
+   <Position x1="1217" y1="1342" x2="2192" y2="1269">
+    <Name>Family 17h/19h/1ah HD Audio Controller Stereo Microphone</Name>
+   </Position>
+   <Position x1="1763" y1="914">
+    <Name>output-ultimate Audio/Sink sink</Name>
+   </Position>
+   <Position x1="1887" y1="723" x2="2162" y2="1022">
+    <Name>Family 17h/19h/1ah HD Audio Controller Headphones</Name>
+   </Position>
+   <Position x1="1550" y1="1473" x2="2255" y2="1476">
+    <Name>Renoir/Cezanne HDMI/DP Audio Controller HDMI / DisplayPort 2 Output</Name>
+   </Position>
+   <Position x1="1803" y1="1035">
+    <Name>input-ultimate Audio/Source/Virtual sink</Name>
+   </Position>
+  </Positions>
+ </ExternalPatchbay>
+</CARLA-PROJECT>
