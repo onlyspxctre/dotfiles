@@ -5,3 +5,9 @@ UseTab: Never
 ColumnLimit: 0
 PointerAlignment: Left
 SpaceAfterCStyleCast: true
+
+BreakBeforeBraces: Attach
+Cpp11BracedListStyle: true # can fuck up line breaks on closing brace
+AlignAfterOpenBracket: Align
+RemoveBracesLLVM: false # stop clang-format from stripping braces
+SpaceInEmptyBlock: false
