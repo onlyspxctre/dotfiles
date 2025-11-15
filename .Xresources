@@ -8,3 +8,9 @@ Xft.hintstyle: hintslight
 Xft.hinting: 1
 Xft.antialias: 1
 Xft.rgba: rgb
+
+URxvt.font:                 xft:monospace:size=20:style=Regular
+URxvt.geometry:             80x-1
+URxvt.scrollBar:            false
+
+#include "./theme.xresources"
