@@ -14,3 +14,10 @@ URxvt.geometry:             80x-1
 URxvt.scrollBar:            false
 
 #include "./theme.xresources"
+
+dwm.normbgcolor: BACKGROUND
+dwm.normfgcolor: FOREGROUND
+dwm.selbgcolor: BACKGROUND
+dwm.selfgcolor: CYAN
+dwm.normbordercolor: BACKGROUND
+dwm.selbordercolor: BLACK_1
