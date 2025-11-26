@@ -1,6 +1,5 @@
 unset HISTFILE
 
-
 # PS1
 export PS1="\[\e[38;5;165m\]\u\[\e[38;5;171m\]@\[\e[38;5;213m\]\h \[\e[38;5;219m\]\w \[\e[38;5;220m\]$ \[\033[0m\]"
 
@@ -10,3 +9,18 @@ export EDITOR=$VISUAL
 
 # Qt Rice
 export QT_QPA_PLATFORMTHEME=qt6ct
+
+# Aliases
+alias ls='ls --color=always'
+alias la='ls -a'
+alias ll='ls -la'
+alias l='ll'
+alias grep='grep --color=always'
+alias less='less -R'
+alias pacman='pacman --color=always'
+alias paru='paru --color=always'
+
+alias neofetch='fastfetch'
+
+# PATH
+export PATH=$HOME/.bun/bin:$PATH
