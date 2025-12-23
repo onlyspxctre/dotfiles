@@ -14,7 +14,7 @@ export QT_QPA_PLATFORMTHEME=qt6ct
 alias ls='ls --color=always'
 alias la='ls -a'
 alias ll='ls -la'
-alias l='ll'
+alias l='ls -lah'
 alias grep='grep --color=always'
 alias less='less -R'
 alias pacman='pacman --color=always'
