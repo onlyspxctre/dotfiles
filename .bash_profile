@@ -4,7 +4,7 @@ unset HISTFILE
 export PS1="\[\e[38;5;165m\]\u\[\e[38;5;171m\]@\[\e[38;5;213m\]\h \[\e[38;5;219m\]\w \[\e[38;5;220m\]$ \[\033[0m\]"
 
 # Editor
-export VISUAL=vim
+export VISUAL=nvim
 export EDITOR=$VISUAL
 
 # Qt Rice
@@ -21,6 +21,8 @@ alias pacman='pacman --color=always'
 alias paru='paru --color=always'
 
 alias neofetch='fastfetch'
+alias vim=nvim
+alias vi=vim
 
 # PATH
 export PATH=$HOME/.bun/bin:$PATH
