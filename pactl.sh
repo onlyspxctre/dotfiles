@@ -2,6 +2,7 @@
 
 pactl load-module module-null-sink media.class=Audio/Sink sink_name=output-ultimate
 pactl load-module module-null-sink media.class=Audio/Source/Virtual sink_name=input-ultimate
+pactl load-module module-null-sink media.class=Audio/Sink sink_name=loopback
 
 pactl set-default-sink output-ultimate
 pactl set-default-source input-ultimate
