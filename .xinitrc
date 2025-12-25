@@ -56,5 +56,5 @@ while true; do
 done &
 
 xset r rate 200 60
-./dock.sh
+[[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap
 exec dwm
