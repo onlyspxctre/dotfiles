@@ -7,7 +7,7 @@ CompileFlags:
     - -I/usr/local/include
     - -I/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include-fixed
     - -I/usr/include
-    - -I/usr/include/freetype2
+    - -xc-header
     - -Wall
     - -Wextra
     - -Wshadow
