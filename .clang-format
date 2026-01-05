@@ -10,6 +10,7 @@ SpaceAfterCStyleCast: true
 
 BreakBeforeBraces: Attach
 Cpp11BracedListStyle: true # can fuck up line breaks on closing brace
+BinPackArguments: false
 AlignAfterOpenBracket: Align
 RemoveBracesLLVM: false # stop clang-format from stripping braces
 SpaceInEmptyBlock: false
