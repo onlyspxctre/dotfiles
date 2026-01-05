@@ -17,7 +17,7 @@ URxvt.scrollBar:            false
 
 dwm.normbgcolor: BACKGROUND
 dwm.normfgcolor: FOREGROUND
-dwm.selbgcolor: BACKGROUND
+dwm.selbgcolor: OVERLAY
 dwm.selfgcolor: CYAN
 dwm.normbordercolor: BACKGROUND
 dwm.selbordercolor: BLACK_1

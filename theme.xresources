@@ -1,6 +1,7 @@
 ! special
 #define FOREGROUND #e0def4
 #define BACKGROUND #191724
+#define OVERLAY #26233a
 *.foreground:   FOREGROUND
 *.background:   BACKGROUND
 *.cursorColor:  #e0def4
