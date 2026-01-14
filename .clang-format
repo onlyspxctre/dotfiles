@@ -5,7 +5,7 @@ IndentCaseLabels: true
 IndentGotoLabels: true
 UseTab: Never
 ColumnLimit: 120
-PointerAlignment: Left
+PointerAlignment: Right
 SpaceAfterCStyleCast: true
 
 BreakBeforeBraces: Attach
