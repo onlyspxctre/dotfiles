@@ -22,29 +22,33 @@ tooltip {
   border-color: @overlay;
 }
 
-#workspaces button {
-  padding: 5px;
+#workspaces button, #tags button {
+  padding: 10px;
   color: @highlightMed;
-  margin-right: 5px;
+  /* margin-right: 5px; */
 }
 
 #workspaces button.active {
   color: @text;
 }
 
-#workspaces button.focused {
-  color: @subtle;
-  background: @love;
+#tags button.occupied {
+	color: @muted;
+}
+
+#workspaces button.focused, #tags button.focused {
+  color: @text;
+  background: @surface;
   border-radius: 10px;
 }
 
-#workspaces button.urgent {
+#workspaces button.urgent, #tags button.urgent {
   color: @base;
   background: @pine;
   border-radius: 10px;
 }
 
-#workspaces button:hover {
+#workspaces button:hover, #tags button:hover {
   background: @highlightLow;
   color: @text;
   border-radius: 10px;
@@ -60,6 +64,7 @@ tooltip {
 #bluetooth,
 #temperature,
 #workspaces,
+#tags,
 #tray,
 #memory,
 #backlight {
@@ -67,7 +72,6 @@ tooltip {
   opacity: 0.9;
   padding: 0px 10px;
   margin: 3px 0px;
-  margin-top: 10px;
   border: 1px solid @overlay;
 }
 
@@ -97,12 +101,15 @@ tooltip {
   margin-right: 10px;
 }
 
-#workspaces {
+#workspaces, #tags {
   background: @base;
   border-radius: 10px;
-  margin-left: 10px;
+  margin-left: 5px;
+  margin-right: 0px;
+  padding-left: 0px;
   padding-right: 0px;
-  padding-left: 5px;
+  /* padding-right: 0px; */
+  /* padding-left: 5px; */
 }
 
 #custom-power_profile {
@@ -140,10 +147,10 @@ tooltip {
 
 #pulseaudio {
   color: @iris;
-  border-radius: 10px 10px 10px 10px;
+  border-radius: 10px;
   /* border-left: 0px; */
   border-right: 0px;
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
 #pulseaudio.microphone {
@@ -156,8 +163,8 @@ tooltip {
 
 #battery {
   color: @foam;
-  border-radius: 0 10px 10px 0;
-  margin-right: 10px;
+  border-radius: 10px;
+  /* margin-right: 10px; */
   border-left: 0px;
 }
 
