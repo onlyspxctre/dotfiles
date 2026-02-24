@@ -25,4 +25,4 @@ alias vim=nvim
 alias vi=vim
 
 # PATH
-export PATH=$HOME/.bun/bin:$PATH
+export PATH=$HOME/.bun/bin:$HOME/.local/bin:$PATH

@@ -1,1 +1,6 @@
 @import "rose-pine.rasi"
+
+configuration {
+    show-icons: true;
+    icon-theme: "Neuwaita";
+}

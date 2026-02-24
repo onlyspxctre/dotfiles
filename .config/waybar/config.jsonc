@@ -5,11 +5,11 @@
   "exclusive": true,
   "passthrough": false,
   "gtk-layer-shell": true,
-  "height": 50,
+  "height": 32,
   "spacing": 4,
   "ipc": true,
   "modules-left": ["dwl/tags"],
-  "modules-center": [],
+  "modules-center": ["dwl/window","dwl/window#2"],
   "modules-right": [
     "network",
     "bluetooth",
@@ -27,6 +27,14 @@
           "num-tags": 9,
           "tag-labels": [ "一", "二", "三", "四", "五", "六", "七", "八", "九" ],
           "disable-click": false
+  },
+  "dwl/window": {
+      "format": "{title}",
+      "icon": true
+  },
+  "dwl/window#2": {
+      "format": "{layout}",
+      "icon": false
   },
   "hyprland/workspaces": {
     "disable-scroll": true,
