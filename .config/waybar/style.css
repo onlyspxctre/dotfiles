@@ -24,7 +24,8 @@ tooltip {
 
 #workspaces button, #tags button {
   padding: 10px;
-  color: @highlightMed;
+  color: @overlay;
+  /* color: @highlightMed; */
   /* margin-right: 5px; */
 }
 
@@ -37,7 +38,7 @@ tooltip {
 }
 
 #workspaces button.focused, #tags button.focused {
-  color: @text;
+  color: @gold;
   background: @surface;
   border-radius: 10px;
 }
@@ -128,16 +129,13 @@ tooltip {
 
 #clock {
   color: @gold;
-  border-radius: 10px 0px 0px 10px;
-  margin-left: 10px;
-  border-right: 0px;
+  border-radius: 10px;
+  margin-right: 5px;
 }
 
 #network {
   color: @love;
   border-radius: 10px 10px 10px 10px;
-  /* border-left: 0px; */
-  border-right: 0px;
 }
 
 #bluetooth {
@@ -151,8 +149,6 @@ tooltip {
   color: @iris;
   border-radius: 10px;
   /* border-left: 0px; */
-  border-right: 0px;
-  margin-right: 5px;
 }
 
 #pulseaudio.microphone {
@@ -167,7 +163,6 @@ tooltip {
   color: @foam;
   border-radius: 10px;
   /* margin-right: 10px; */
-  border-left: 0px;
 }
 
 #custom-weather {
