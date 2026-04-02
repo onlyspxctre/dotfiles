@@ -8,8 +8,8 @@
   "height": 30,
   "spacing": 4,
   "ipc": true,
-  "modules-left": ["dwl/tags"],
-  "modules-center": ["dwl/window","dwl/window#2"],
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["hyprland/window"],
   "modules-right": [
     "network",
     // "bluetooth",
