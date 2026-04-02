@@ -1,4 +1,5 @@
 BasedOnStyle: llvm
+Language: Cpp
 
 IndentWidth: 4
 IndentCaseLabels: true
