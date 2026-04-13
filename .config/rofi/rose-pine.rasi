@@ -13,11 +13,12 @@
 	yel: #f6c177;
 
 	foreground: @fgd;
-	background: @bg;
-	active-background: @grn;
+	background: #000000cc;
+    entry-background: #00000000;
+	active-background: @pur;
 	urgent-background: @red;
 
-	selected-background: @active-background;
+	selected-background: @background;
 	selected-urgent-background: @urgent-background;
 	selected-active-background: @active-background;
 	separatorcolor: @active-background;
@@ -56,7 +57,7 @@
 	padding: 1px ;
 }
 #element.normal.normal {
-	background-color: @background;
+	background-color: @entry-background;
 	text-color:       @foreground;
 }
 #element.normal.urgent {
@@ -69,7 +70,7 @@
 }
 #element.selected.normal {
 	background-color: @selected-background;
-	text-color:       @foreground;
+	text-color:       @red;
 }
 #element.selected.urgent {
 	background-color: @selected-urgent-background;
@@ -80,7 +81,7 @@
 	text-color:       @background;
 }
 #element.alternate.normal {
-	background-color: @background;
+	background-color: @entry-background;
 	text-color:       @foreground;
 }
 #element.alternate.urgent {
