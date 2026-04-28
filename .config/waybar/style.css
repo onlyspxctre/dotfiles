@@ -23,18 +23,29 @@ tooltip {
 }
 
 #workspaces button, #tags button {
-  padding: 10px;
-  color: @overlay;
+  padding: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  color: @muted;
   /* color: @highlightMed; */
   /* margin-right: 5px; */
 }
 
-#workspaces button.active {
-  color: @text;
+#workspaces button.empty {
+    color: @overlay;
 }
 
 #tags button.occupied {
 	color: @muted;
+}
+
+#tags button {
+    color: @overlay;
+}
+
+#workspaces button.active {
+  color: @gold;
+  border-radius: 10px;
 }
 
 #workspaces button.focused, #tags button.focused {
