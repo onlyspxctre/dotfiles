@@ -5,10 +5,10 @@
   "exclusive": true,
   "passthrough": false,
   "gtk-layer-shell": true,
-  "height": 30,
+  "height": 15,
   "spacing": 4,
   "ipc": true,
-  "modules-left": ["hyprland/workspaces"],
+  "modules-left": ["hyprland/workspaces", "hyprland/windowcount"],
   "modules-center": ["hyprland/window"],
   "modules-right": [
     "network",
@@ -22,7 +22,13 @@
     // "tray"
   ],
   "hyprland/window": {
-    "format": "{}"
+    "format": "{}",
+    "icon": true,
+    "icon-size": 16,
+    "max-length": 80
+  },
+  "hyprland/windowcount": {
+      "format": "[{}]"
   },
    "dwl/tags": {
           "num-tags": 9,

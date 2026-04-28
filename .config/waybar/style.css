@@ -77,6 +77,7 @@ tooltip {
 #temperature,
 #workspaces,
 #tags,
+#windowcount,
 #tray,
 #memory,
 #backlight {
@@ -85,6 +86,7 @@ tooltip {
   padding: 0px 10px;
   margin: 3px 0px;
   border: 2px solid @overlay;
+  border-radius: 10px;
 }
 
 #memory {
@@ -136,6 +138,10 @@ tooltip {
   /* padding-left: 4px; */
   /* margin-left: 60px; */
   /* margin-right: 60px; */
+}
+
+#windowcount {
+    padding: 0px 2px;
 }
 
 #clock {
