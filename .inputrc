@@ -1,0 +1,4 @@
+set menu-complete-display-prefix on
+set show-all-if-ambiguous on
+TAB: menu-complete
+"\e[Z": menu-complete-backward
