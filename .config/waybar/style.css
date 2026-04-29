@@ -14,6 +14,7 @@ window#waybar {
   color: @text;
 }
 
+
 tooltip {
   background: @base;
   border-radius: 10px;
@@ -43,14 +44,8 @@ tooltip {
     color: @overlay;
 }
 
-#workspaces button.active {
-  color: @gold;
-  border-radius: 10px;
-}
-
-#workspaces button.focused, #tags button.focused {
-  color: @gold;
-  background: @surface;
+#workspaces button.active, #workspaces button.focused, #tags button.focused {
+  color: @rose;
   border-radius: 10px;
 }
 
@@ -138,6 +133,10 @@ tooltip {
   /* padding-left: 4px; */
   /* margin-left: 60px; */
   /* margin-right: 60px; */
+}
+
+window#waybar.empty #window {
+    opacity: 0;
 }
 
 #windowcount {
