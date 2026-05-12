@@ -36,7 +36,7 @@ end)
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
 
-hl.env("ELECTRON_OZONE_PLATFORM_HINT", "auto")
+hl.env("ELECTRON_OZONE_PLATFORM_HINT", "wayland")
 
 hl.env("XDG_CURRENT_DESKTOP", "Hyprland")
 hl.env("XDG_SESSION_TYPE", "wayland")
@@ -109,7 +109,9 @@ hl.config({
             enabled = true,
             size = 3,
             passes = 1,
-            vibrancy = 0.1696
+            vibrancy = 0.1696,
+            popups = true,
+            xray = true,
         }
     },
 
@@ -316,6 +318,7 @@ hl.bind(mod .. " + L", hl.dsp.focus({ direction = "right" }))
 
 hl.bind(mod .. " + J", hl.dsp.layout("cyclenext"))
 hl.bind(mod .. " + K", hl.dsp.layout("cycleprev"))
+hl.bind(mod .. " + RETURN", hl.dsp.layout("swapwithmaster"))
 
 hl.bind(mod .. " + C", hl.dsp.window.close())
 hl.bind(mod .. " + SHIFT + Q", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
