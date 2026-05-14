@@ -231,8 +231,8 @@ hl.animation({
 hl.animation({
     leaf = "fade",
     enabled = true,
-    speed = 6,
-    bezier = "standard",
+    speed = 3,
+    bezier = "specialWorkSwitch",
 })
 
 hl.animation({
@@ -332,10 +332,18 @@ for i = 1, 10 do
 end
 
 hl.bind(mod .. " + T", function()
-    hl.dispatch("keyword general:layout master")
+    hl.config({
+        general = {
+            layout = "master"
+        }
+    })
 end)
 hl.bind(mod .. " + M", function()
-    hl.dispatch("keyword general:layout monocle")
+    hl.config({
+        general = {
+            layout = "monocle"
+        }
+    })
 end)
 
 -- Scroll through existing workspaces with mod + scroll
