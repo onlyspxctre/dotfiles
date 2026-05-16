@@ -10,14 +10,16 @@ hl.monitor({
     scale = "auto",
 })
 
--------------------
---- MY PROGRAMS ---
--------------------
+-----------------
+--- VARIABLES ---
+-----------------
 
 local terminal = "footclient"
 local menu = "rofi -show run"
 local drun = "rofi -show drun"
 local grim = "grim -g \"$(slurp)\" - | swappy -f -"
+
+local battery_saver = false
 
 -----------------
 --- AUTOSTART ---
@@ -271,6 +273,13 @@ hl.config({
         touchpad = {
             natural_scroll = false,
         }
+    },
+    gestures = {
+        workspace_swipe_distance = 1200,
+        workspace_swipe_cancel_ratio = 0.3,
+        workspace_swipe_min_speed_to_force = 10,
+        workspace_swipe_direction_lock = false,
+        workspace_swipe_forever = true,
     }
 })
 
@@ -310,6 +319,7 @@ hl.bind(mod .. " + SHIFT + RETURN", hl.dsp.exec_cmd(drun))
 hl.bind(mod .. " + SHIFT + S", hl.dsp.exec_cmd(grim))
 hl.bind(mod .. " + F", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mod .. " + SHIFT + F", hl.dsp.window.fullscreen({ action = "toggle" }))
+hl.bind(mod .. " + B", hl.dsp.exec_cmd("killall -SIGUSR1 waybar"))
 
 hl.bind(mod .. " + H",  hl.dsp.focus({ direction = "left" }))
 hl.bind(mod .. " + L", hl.dsp.focus({ direction = "right" }))
@@ -322,6 +332,26 @@ hl.bind(mod .. " + RETURN", hl.dsp.layout("swapwithmaster"))
 
 hl.bind(mod .. " + C", hl.dsp.window.close())
 hl.bind(mod .. " + SHIFT + Q", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
+
+hl.bind(mod .. " + SHIFT + F9", function()
+    battery_saver = not battery_saver
+    if battery_saver then
+        hl.notification.create({ text = "Battery Saver: ON", duration = 2000 })
+    else
+        hl.notification.create({ text = "Battery Saver: OFF", duration = 2000 })
+    end
+
+    hl.config({
+        animations = {
+            enabled = not battery_saver,
+        },
+        decoration = {
+            shadow = {
+                enabled = not battery_saver,
+            },
+        },
+    })
+end)
 
 -- Switch workspaces with mod + [0-9]
 -- Move active window to a workspace with mod + SHIFT + [0-9]
