@@ -408,7 +408,7 @@ hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = tr
 
 hl.window_rule({
     match = {
-        class = "helium"
+        class = "(helium|footclient)"
     },
     fullscreen_state = "0 1",
 })
