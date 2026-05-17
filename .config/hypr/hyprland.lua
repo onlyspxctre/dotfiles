@@ -15,6 +15,7 @@ hl.monitor({
 -----------------
 
 local terminal = "footclient"
+-- local terminal = "alacritty msg create-window"
 local menu = "rofi -show run"
 local drun = "rofi -show drun"
 local grim = "grim -g \"$(slurp)\" - | swappy -f -"
@@ -28,7 +29,6 @@ local battery_saver = false
 hl.on("hyprland.start", function()
     hl.exec_cmd("foot -s")
     hl.exec_cmd("waybar &")
-    hl.exec_cmd("systemctl --user start hyprpolkitagent")
 end)
 
 -----------------------------
@@ -44,7 +44,10 @@ hl.env("XDG_CURRENT_DESKTOP", "Hyprland")
 hl.env("XDG_SESSION_TYPE", "wayland")
 hl.env("XDG_SESION_DESKTOP", "wayland")
 
--- TODO env = ANV_DEBUG,video-decode,video-encode
+hl.env("ANV_DEBUG", "video-decode,video-encode")
+
+hl.env("QT_QPA_PLATFORM", "wayland")
+hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
 
 -------------------
 --- PERMISSIONS ---
@@ -402,6 +405,13 @@ hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = tr
 ------------------------------
 --- WINDOWS AND WORKSPACES ---
 ------------------------------
+
+hl.window_rule({
+    match = {
+        class = "helium"
+    },
+    fullscreen_state = "0 1",
+})
 
 hl.layer_rule({
     match = {
