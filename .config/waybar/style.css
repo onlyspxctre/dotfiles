@@ -12,7 +12,11 @@
 }
 
 window#waybar {
-  background: rgba(21, 18, 27, 0);
+    background: @transparent-bg;
+  /* border: 1px solid @overlay; */
+  border-radius: 10px;
+  opacity: 0.8;
+  padding: 10px 10px 0px;
   color: @text;
 }
 
@@ -78,11 +82,11 @@ tooltip {
 #tray,
 #memory,
 #backlight {
-  background: @transparent-bg;
-  opacity: 0.8;
+  /* background: @transparent-bg; */
+  /* opacity: 0.8; */
   padding: 0px 10px;
   margin: 3px 0px;
-  border: 2px solid @overlay;
+  /* border: 2px solid @overlay; */
   border-radius: 10px;
 }
 

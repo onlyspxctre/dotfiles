@@ -73,15 +73,18 @@ hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
 
 hl.config({
     general = {
-        gaps_in = 2,
-        gaps_out = 2,
+        gaps_in = 1,
+        gaps_out = 1,
 
-        border_size = 2,
+        border_size = 1,
 
         col = {
             active_border = {
-                colors = { "rgba(33ccffee)", "rgba(00ff99ee)" },
+                colors = { "rgba(ebbcba88)", "rgba(ea9a9788)" },
                 angle = 45,
+            },
+            inactive_border = {
+                colors = { "rgba(00000000)", "rgba(00000000)" },
             }
         },
 
@@ -104,7 +107,7 @@ hl.config({
         inactive_opacity = 1.0,
 
         shadow = {
-            enabled = true,
+            enabled = false,
             range = 4,
             render_power = 3,
             color = 0xee1a1a1a
@@ -237,7 +240,7 @@ hl.animation({
     leaf = "fade",
     enabled = true,
     speed = 3,
-    bezier = "specialWorkSwitch",
+    bezier = "emphasizedDecel",
 })
 
 hl.animation({
@@ -250,7 +253,7 @@ hl.animation({
 hl.animation({
     leaf = "border",
     enabled = true,
-    speed = 6,
+    speed = 3,
     bezier = "standard",
 })
 
