@@ -11,6 +11,9 @@ export EDITOR=$VISUAL
 export QT_QPA_PLATFORMTHEME=qt6ct
 
 # Aliases
+alias cp='cp -v'
+alias mv='mv -v'
+alias rm='rm -vi'
 alias ls='ls --color=always'
 alias la='ls -a'
 alias ll='ls -la'
