@@ -22,15 +22,6 @@ local grim = "grim -g \"$(slurp)\" - | swappy -f -"
 
 local battery_saver = false
 
------------------
---- AUTOSTART ---
------------------
-
-hl.on("hyprland.start", function()
-    hl.exec_cmd("foot -s")
-    hl.exec_cmd("waybar &")
-end)
-
 -----------------------------
 --- ENVIRONMENT VARIABLES ---
 -----------------------------
@@ -42,12 +33,24 @@ hl.env("ELECTRON_OZONE_PLATFORM_HINT", "wayland")
 
 hl.env("XDG_CURRENT_DESKTOP", "Hyprland")
 hl.env("XDG_SESSION_TYPE", "wayland")
-hl.env("XDG_SESION_DESKTOP", "wayland")
+hl.env("XDG_SESSION_DESKTOP", "Hyprland")
 
 hl.env("ANV_DEBUG", "video-decode,video-encode")
 
-hl.env("QT_QPA_PLATFORM", "wayland")
+hl.env("QT_AUTO_SCREEN_SCALE_FACTOR", "1")
+hl.env("QT_QPA_PLATFORM", "wayland;xcb")
 hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
+
+-----------------
+--- AUTOSTART ---
+-----------------
+
+hl.on("hyprland.start", function()
+    hl.exec_cmd("dbus-update-activation-environment --all")
+    hl.exec_cmd("foot -s")
+    hl.exec_cmd("waybar &")
+    hl.exec_cmd("wlsunset -l 29.6 -L -82.3")
+end)
 
 -------------------
 --- PERMISSIONS ---
@@ -112,7 +115,7 @@ hl.config({
             render_power = 3,
             color = 0xee1a1a1a
         },
-        
+
         blur = {
             enabled = true,
             size = 3,
@@ -279,6 +282,10 @@ hl.config({
         touchpad = {
             natural_scroll = false,
         }
+    },
+    cursor = {
+        hide_on_touch = false,
+        hide_on_tablet = false,
     },
     gestures = {
         workspace_swipe_distance = 1200,
