@@ -118,7 +118,7 @@ hl.config({
 
         blur = {
             enabled = true,
-            size = 3,
+            size = 8,
             passes = 1,
             vibrancy = 0.1696,
             popups = true,
@@ -368,11 +368,13 @@ end)
 
 -- Switch workspaces with mod + [0-9]
 -- Move active window to a workspace with mod + SHIFT + [0-9]
-for i = 1, 10 do
-    local key = i % 10 -- 10 maps to key 0
-    hl.bind(mod .. " + " .. key,             hl.dsp.focus({ workspace = i}))
-    hl.bind(mod .. " + SHIFT + " .. key,     hl.dsp.window.move({ workspace = i }))
+for i = 1, 9 do
+    hl.bind(mod .. " + " .. i,             hl.dsp.focus({ workspace = i}))
+    hl.bind(mod .. " + SHIFT + " .. i,     hl.dsp.window.move({ workspace = i }))
 end
+
+hl.bind(mod .. " + 0", hl.dsp.workspace.toggle_special("scratch"))
+hl.bind(mod .. " + SHIFT + 0", hl.dsp.window.move({ workspace = "special:scratch" } ))
 
 hl.bind(mod .. " + T", function()
     hl.config({
@@ -429,4 +431,13 @@ hl.layer_rule({
     },
     blur = true,
     ignore_alpha = 0,
+})
+
+hl.window_rule({
+    match = {
+        title = "^(Picture-in-Picture)$",
+    },
+    float = true,
+    pin = true,
+    keep_aspect_ratio = true,
 })
