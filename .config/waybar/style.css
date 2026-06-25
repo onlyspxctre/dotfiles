@@ -1,6 +1,6 @@
 @import "./rose-pine.css";
 
-@define-color transparent-bg rgba(0, 0, 0, 0.8);
+@define-color transparent-bg rgba(0, 0, 0, 0.64);
 
 * {
   border: none;
@@ -15,7 +15,7 @@ window#waybar {
     background: @transparent-bg;
   /* border: 1px solid @overlay; */
   border-radius: 10px;
-  opacity: 0.8;
+  /* opacity: 0.8`; */
   padding: 10px 10px 0px;
   color: @text;
 }
@@ -118,6 +118,7 @@ tooltip {
 
 #workspaces, #tags {
   background: @transparent-bg;
+  opacity: 0.4;
   border-radius: 10px;
   margin-left: 5px;
   margin-right: 0px;
