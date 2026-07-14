@@ -352,16 +352,26 @@ hl.bind(mod .. " + SHIFT + F9", function()
         hl.notification.create({ text = "Battery Saver: ON", duration = 2000 })
     else
         hl.notification.create({ text = "Battery Saver: OFF", duration = 2000 })
+        hl.exec_cmd("hyprctl reload")
+        return
     end
 
     hl.config({
+        general = {
+            gaps_in = 0,
+            gaps_out = 0,
+        },
         animations = {
-            enabled = not battery_saver,
+            enabled = false,
         },
         decoration = {
             shadow = {
-                enabled = not battery_saver,
+                enabled = false,
             },
+            blur = {
+                enabled = false,
+            },
+            rounding = 0,
         },
     })
 end)
