@@ -46,10 +46,10 @@ hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
 -----------------
 
 hl.on("hyprland.start", function()
-    hl.exec_cmd("dbus-update-activation-environment --all")
+    hl.exec_cmd("dbus-update-activation-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_TYPE XDG_SESSION_DESKTOP")
     hl.exec_cmd("foot -s")
     hl.exec_cmd("waybar &")
-    hl.exec_cmd("wlsunset -l 29.6 -L -82.3")
+    -- hl.exec_cmd("wlsunset -l 29.6 -L -82.3")
 end)
 
 -------------------
