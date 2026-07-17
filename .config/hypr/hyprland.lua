@@ -320,6 +320,13 @@ hl.device({
     accel_profile = "adaptive",
 })
 
+hl.device({
+    name = "apple-spi-trackpad",
+    sensitivity = 0,
+    scroll_factor = 0.5,
+    accel_profile = "adaptive",
+})
+
 -------------------
 --- KEYBINDINGS ---
 -------------------
