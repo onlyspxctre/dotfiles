@@ -21,6 +21,7 @@ local drun = "rofi -show drun"
 local grim = "grim -g \"$(slurp)\" - | swappy -f -"
 
 local battery_saver = false
+local keyboard = true
 
 -----------------------------
 --- ENVIRONMENT VARIABLES ---
@@ -352,6 +353,17 @@ hl.bind(mod .. " + RETURN", hl.dsp.layout("swapwithmaster"))
 
 hl.bind(mod .. " + C", hl.dsp.window.close())
 hl.bind(mod .. " + SHIFT + Q", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
+
+hl.bind(mod .. " + ALT + F9", function()
+    keyboard = not keyboard
+    hl.device({
+        name = "at-translated-set-2-keyboard",
+        enabled = keyboard
+    })
+
+    hl.notification.create({ text = "Toggled On-board Keyboard", duration = 2000 })
+end, { locked = true })
+
 
 hl.bind(mod .. " + SHIFT + F9", function()
     battery_saver = not battery_saver
