@@ -282,6 +282,7 @@ hl.config({
 
         touchpad = {
             natural_scroll = false,
+            scroll_factor = 0.5,
         }
     },
     cursor = {
