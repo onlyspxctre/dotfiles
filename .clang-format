@@ -16,3 +16,4 @@ AlignAfterOpenBracket: Align
 RemoveBracesLLVM: false # stop clang-format from stripping braces
 SpaceInEmptyBraces: Never
 AllowShortIfStatementsOnASingleLine: AllIfsAndElse
+AllowShortCaseLabelsOnASingleLine: true
