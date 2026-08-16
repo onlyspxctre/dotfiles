@@ -19,3 +19,6 @@ user_pref("signon.formlessCapture.enabled", false);
 user_pref("signon.management.page.breach-alerts.enabled", false);
 user_pref("extensions.formautofill.addresses.enabled", false);
 user_pref("extensions.formautofill.creditCards.enabled", false);
+
+user_pref("browser.cache.disk.enable", true);
+user_pref("media.peerconnection.enabled", true);
