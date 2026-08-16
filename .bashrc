@@ -6,6 +6,6 @@ export PS1="\[\033[1;36m\]\u\[\033[0;37m\]@\[\033[1;96m\]\h \[\033[0;35m\]\w \[\
 export PNPM_HOME="/home/spxctre/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
 esac
 # pnpm end
