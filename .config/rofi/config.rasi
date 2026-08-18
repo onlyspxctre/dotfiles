@@ -1,6 +1,5 @@
 @import "rose-pine.rasi"
 
 configuration {
-    disable-history: true;
     show-icons: true;
 }
