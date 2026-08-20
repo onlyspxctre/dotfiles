@@ -1,2 +1,2 @@
-tui enable
 set tui border-kind acs
+set disassembly-flavor intel
