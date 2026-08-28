@@ -2,6 +2,34 @@
   "$schema": "https://opencode.ai/config.json",
   "theme": "system",
   "provider": {
+    "empero": {
+        "adapter": "@ai-sdk/openai-compatible",
+        "name": "Empero V1",
+        "baseURL": "https://free.empero.org/v1",
+    },
+    "tokenharbor": {
+        "adapter": "@ai-sdk/openai-compatible",
+        "name": "TokenHarbor V1",
+        "baseURL": "https://tokenharbor.ai/v1",
+        "models": {
+            "th-orchestra": {
+                "name": "TokenHarbor",
+                "tools": true,
+                "context": 256000
+            }
+        }
+    },
+    "orcarouter": {
+      "adapter": "@ai-sdk/openai-compatible",
+      "name": "OrcaRouter",
+      "baseURL": "https://api.orcarouter.ai/v1",
+      "models": {
+        "orcarouter/free": {
+          "name": "OrcaRouter Free",
+          "tools": true
+        }
+      }
+    },
     "ollama": {
       "npm": "@ai-sdk/openai-compatible",
       "name": "Ollama",
