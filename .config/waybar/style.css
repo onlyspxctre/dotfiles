@@ -1,23 +1,19 @@
 @import "./rose-pine.css";
 
-@define-color transparent-bg rgba(0, 0, 0, 0.64);
+@define-color transparent-bg rgba(0, 0, 0, 0.75);
 
 * {
   border: none;
   border-radius: 0;
   font-family: "monospace";
   font-weight: bold;
-  font-size: 15px;
+  font-size: 13px;
   min-height: 0;
 }
 
 window#waybar {
     background: @transparent-bg;
-  /* border: 1px solid @overlay; */
-  border-radius: 10px;
-  /* opacity: 0.8`; */
-  padding: 10px 10px 0px;
-  color: @text;
+    color: @text;
 }
 
 
@@ -34,6 +30,7 @@ tooltip {
   padding-left: 8px;
   padding-right: 8px;
   color: @muted;
+  border-radius: 10px;
   /* color: @highlightMed; */
   /* margin-right: 5px; */
 }
@@ -52,19 +49,16 @@ tooltip {
 
 #workspaces button.active, #workspaces button.focused, #tags button.focused {
   color: @rose;
-  border-radius: 10px;
 }
 
 #workspaces button.urgent, #tags button.urgent {
   color: @base;
   background: @pine;
-  border-radius: 10px;
 }
 
 #workspaces button:hover, #tags button:hover {
   background: @highlightLow;
   color: @text;
-  border-radius: 10px;
 }
 
 #custom-power_profile,
@@ -82,11 +76,8 @@ tooltip {
 #tray,
 #memory,
 #backlight {
-  /* background: @transparent-bg; */
-  /* opacity: 0.8; */
   padding: 0px 10px;
   margin: 3px 0px;
-  /* border: 2px solid @overlay; */
   border-radius: 10px;
 }
 
