@@ -9,3 +9,5 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME/bin:$PATH" ;;
 esac
 # pnpm end
+
+[ -f "/home/spxctre/.ghcup/env" ] && . "/home/spxctre/.ghcup/env" # ghcup-env
