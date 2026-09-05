@@ -1,0 +1,20 @@
+#!/bin/sh
+
+pdfopen() {
+    TARGET=$( find . -type f -name "*.pdf" | rofi -dmenu -no-custom -p "Open:")
+
+    if [ ! -z $TARGET ]; then
+        zathura $TARGET
+    else
+        echo "No PDFs in cwd found! Exiting..."
+    fi
+}
+
+texmake() {
+    TARGET=$(find . -type f -name "*.tex")
+    latexmk -pdf $TARGET -interaction=nonstopmode && latexmk -c $TARGET
+}
+
+export -f pdfopen
+export -f texmake
+bash --rcfile <(echo 'source ~/.bashrc;export PS1="<texenv> ${PS1}";')
