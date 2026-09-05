@@ -15,6 +15,7 @@ hl.monitor({
 -----------------
 
 local terminal = "footclient"
+local quickattach = "footclient -e tmux a -d || tmux new -d"
 -- local terminal = "alacritty msg create-window"
 local menu = "rofi -show run"
 local drun = "rofi -show drun"
@@ -50,6 +51,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("dbus-update-activation-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_TYPE XDG_SESSION_DESKTOP")
     hl.exec_cmd("foot -s")
     hl.exec_cmd("waybar &")
+    hl.exec_cmd("swaybg -i ~/Pictures/Backgrounds/monterey.jpg -m fill")
     -- hl.exec_cmd("wlsunset -l 29.6 -L -82.3")
 end)
 
@@ -124,7 +126,7 @@ hl.config({
             vibrancy = 0.1696,
             popups = true,
             xray = true,
-        }
+        },
     },
 
     animations = {
