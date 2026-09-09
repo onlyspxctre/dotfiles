@@ -5,17 +5,25 @@
     "empero": {
         "adapter": "@ai-sdk/openai-compatible",
         "name": "Empero V1",
-        "baseURL": "https://free.empero.org/v1",
+        "baseURL": "https://free.empero.org/v1"
     },
     "tokenharbor": {
-        "adapter": "@ai-sdk/openai-compatible",
+        "npm": "@ai-sdk/openai-compatible",
         "name": "TokenHarbor V1",
-        "baseURL": "https://tokenharbor.ai/v1",
+        "options": {
+            "baseURL": "https://tokenharbor.ai/v1"
+        },
         "models": {
             "th-orchestra": {
-                "name": "TokenHarbor",
+                "name": "Orchestra",
                 "tools": true,
                 "context": 256000
+            },
+            "deepseek-v4-flash:free": {
+                "name": "Deepseek V4 Flash (Free)",
+                "tools": true,
+                "context": 256000,
+                "isFree": true
             }
         }
     },
