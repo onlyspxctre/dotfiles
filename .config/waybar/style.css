@@ -27,8 +27,6 @@ tooltip {
 
 #workspaces button, #tags button {
   padding: 4px;
-  padding-left: 8px;
-  padding-right: 8px;
   color: @muted;
   border-radius: 10px;
   /* color: @highlightMed; */

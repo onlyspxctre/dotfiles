@@ -276,7 +276,7 @@ hl.config({
         kb_options = "ctrl:nocaps",
         kb_rules = "",
 
-        repeat_delay = 200,
+        repeat_delay = 250,
         repeat_rate = 60,
 
         follow_mouse = 1,
@@ -406,8 +406,8 @@ for i = 1, 9 do
     hl.bind(mod .. " + SHIFT + " .. i,     hl.dsp.window.move({ workspace = i }))
 end
 
-hl.bind(mod .. " + 0", hl.dsp.workspace.toggle_special("scratch"))
-hl.bind(mod .. " + SHIFT + 0", hl.dsp.window.move({ workspace = "special:scratch" } ))
+hl.bind(mod .. " + 0", hl.dsp.workspace.toggle_special("s"))
+hl.bind(mod .. " + SHIFT + 0", hl.dsp.window.move({ workspace = "special:s" } ))
 
 hl.bind(mod .. " + T", function()
     hl.config({
