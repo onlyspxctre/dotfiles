@@ -353,6 +353,9 @@ hl.bind(mod .. " + B", hl.dsp.exec_cmd("killall -SIGUSR1 waybar"))
 
 hl.bind(mod .. " + H",  hl.dsp.focus({ direction = "left" }))
 hl.bind(mod .. " + L", hl.dsp.focus({ direction = "right" }))
+hl.bind(mod .. " + SHIFT + L", hl.dsp.layout("mfact +0.05"))
+hl.bind(mod .. " + SHIFT + H", hl.dsp.layout("mfact -0.05"))
+hl.bind(mod .. " + SHIFT + O", hl.dsp.layout("mfact exact 0.55"))
 -- hl.bind(mod .. " + K",    hl.dsp.focus({ direction = "up" }))
 -- hl.bind(mod .. " + J",  hl.dsp.focus({ direction = "down" }))
 
