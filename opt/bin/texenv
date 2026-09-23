@@ -12,7 +12,8 @@ pdfopen() {
 
 texmake() {
     TARGET=$(find . -type f -name "*.tex")
-    latexmk -pdf $TARGET -interaction=nonstopmode && latexmk -c $TARGET
+    latexmk -pdf -cd $TARGET -interaction=nonstopmode
+    latexmk -cd -c $TARGET
 }
 
 export -f pdfopen
