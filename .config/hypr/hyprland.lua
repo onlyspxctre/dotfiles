@@ -79,10 +79,10 @@ end)
 
 hl.config({
     general = {
-        gaps_in = 1,
-        gaps_out = 1,
+        gaps_in = 0,
+        gaps_out = 0,
 
-        border_size = 1,
+        border_size = 2,
 
         col = {
             active_border = {
@@ -90,7 +90,7 @@ hl.config({
                 angle = 45,
             },
             inactive_border = {
-                colors = { "rgba(00000000)", "rgba(00000000)" },
+                colors = { "rgba(1f1d2eAA)", "rgba(26233aAA)" },
             }
         },
 
@@ -106,7 +106,7 @@ hl.config({
     },
 
     decoration = {
-        rounding = 10,
+        rounding = 0,
         rounding_power = 2,
 
         active_opacity = 1.0,
