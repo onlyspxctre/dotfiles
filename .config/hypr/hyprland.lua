@@ -121,11 +121,6 @@ hl.config({
 
         blur = {
             enabled = true,
-            size = 8,
-            passes = 1,
-            vibrancy = 0.1696,
-            popups = true,
-            xray = true,
         },
     },
 
@@ -142,11 +137,6 @@ hl.config({
     xwayland = {
         force_zero_scaling = true,
     },
-
-    render = {
-        direct_scanout = true,
-        new_render_scheduling = true
-    }
 })
 
 hl.curve("specialWorkSwitch", {
