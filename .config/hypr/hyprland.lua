@@ -321,6 +321,12 @@ hl.device({
 })
 
 hl.device({
+	name = "pixa3838:00-093a:3838-touchpad",
+	sensitivity = 0,
+	accel_profile = "adaptive"
+})
+
+hl.device({
     name = "apple-spi-trackpad",
     sensitivity = 0,
     scroll_factor = 0.5,
