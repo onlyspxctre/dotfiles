@@ -1,54 +1,11 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "theme": "system",
-  "provider": {
-    "empero": {
-        "adapter": "@ai-sdk/openai-compatible",
-        "name": "Empero V1",
-        "baseURL": "https://free.empero.org/v1"
-    },
-    "tokenharbor": {
-        "npm": "@ai-sdk/openai-compatible",
-        "name": "TokenHarbor V1",
-        "options": {
-            "baseURL": "https://tokenharbor.ai/v1"
-        },
-        "models": {
-            "th-orchestra": {
-                "name": "Orchestra",
-                "tools": true,
-                "context": 256000
-            },
-            "deepseek-v4-flash:free": {
-                "name": "Deepseek V4 Flash (Free)",
-                "tools": true,
-                "context": 256000,
-                "isFree": true
-            }
-        }
-    },
-    "orcarouter": {
-      "adapter": "@ai-sdk/openai-compatible",
-      "name": "OrcaRouter",
-      "baseURL": "https://api.orcarouter.ai/v1",
-      "models": {
-        "orcarouter/free": {
-          "name": "OrcaRouter Free",
-          "tools": true
-        }
-      }
-    },
+  "providers": {
     "ollama": {
-      "npm": "@ai-sdk/openai-compatible",
       "name": "Ollama",
-      "options": {
+      "package": "aisdk:@ai-sdk/openai-compatible",
+      "settings": {
         "baseURL": "http://localhost:11434/v1"
-      },
-      "models": {
-        "qwen3.8-9b-coder-32k": {
-          "name": "qwen3.8-9b-coder-32k",
-          "tools": true
-        }
       }
     }
   }
