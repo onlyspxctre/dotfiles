@@ -51,8 +51,9 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("dbus-update-activation-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_TYPE XDG_SESSION_DESKTOP")
     hl.exec_cmd("foot -s")
     hl.exec_cmd("waybar &")
-    hl.exec_cmd("swaybg -i ~/Pictures/Backgrounds/monterey.jpg -m fill")
-    -- hl.exec_cmd("wlsunset -l 29.6 -L -82.3")
+    hl.exec_cmd("swaybg -i ~/Pictures/Backgrounds/winding_road_bg.jpg -m fill")
+    hl.exec_cmd("hypridle")
+    hl.exec_cmd("hyprsunset")
 end)
 
 -------------------
@@ -114,9 +115,6 @@ hl.config({
 
         shadow = {
             enabled = false,
-            range = 4,
-            render_power = 3,
-            color = 0xee1a1a1a
         },
 
         blur = {
