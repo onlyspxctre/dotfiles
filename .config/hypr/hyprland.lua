@@ -119,6 +119,8 @@ hl.config({
 
         blur = {
             enabled = true,
+            new_optimizations = true,
+            xray = true
         },
     },
 
@@ -127,6 +129,7 @@ hl.config({
     },
 
     misc = {
+        render_unfocused_fps = 1,
         force_default_wallpaper = 0,
         disable_hyprland_logo = true,
         disable_splash_rendering = true,
@@ -135,6 +138,17 @@ hl.config({
     xwayland = {
         force_zero_scaling = true,
     },
+
+    render = {
+        direct_scanout = 2,
+        new_render_scheduling = true,
+        send_content_type = false
+    },
+
+    -- debug = {
+    --     overlay = true,
+    --     vfr = false
+    -- }
 })
 
 hl.curve("specialWorkSwitch", {
