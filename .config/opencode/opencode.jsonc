@@ -7,6 +7,73 @@
       "settings": {
         "baseURL": "http://localhost:11434/v1"
       }
+    },
+    "llamacpp": {
+      "name": "Llama.cpp",
+      "package": "aisdk:@ai-sdk/openai-compatible",
+      "settings": {
+        "baseURL": "http://127.0.0.1:8080/v1"
+      },
+      "models": {
+          "Qwen3.8-27B-Uncensored-Heretic-MTP-UD-IQ3_XXS": {
+              "name": "Qwen3.8 27B-IQ3 (Uncensored-Heretic-UD-IQ3_XXS)",
+              "settings": {
+                  "reasoningEffort": "medium"
+              },
+              "variants": [
+                  {
+                      "id": "low",
+                      "settings": {
+                          "reasoningEffort": "low"
+                      }
+                  },
+                  {
+                      "id": "high",
+                      "settings": {
+                          "reasoningEffort": "high"
+                      }
+                  },
+                  {
+                      "id": "xhigh",
+                      "settings": {
+                          "reasoningEffort": "xhigh"
+                      }
+                  }
+              ],
+              "limit": {
+                  "context": 32000
+              }
+          },
+          "Qwen3.8-27B-Uncensored-Heretic-MTP-UD-IQ4_XS": {
+              "name": "Qwen3.8 27B-IQ4 (Uncensored-Heretic-UD-IQ4_XS)",
+              "settings": {
+                  "reasoningEffort": "medium"
+              },
+              "variants": [
+                  {
+                      "id": "low",
+                      "settings": {
+                          "reasoningEffort": "low"
+                      }
+                  },
+                  {
+                      "id": "high",
+                      "settings": {
+                          "reasoningEffort": "high"
+                      }
+                  },
+                  {
+                      "id": "xhigh",
+                      "settings": {
+                          "reasoningEffort": "xhigh"
+                      }
+                  }
+              ],
+              "limit": {
+                  "context": 32768
+              }
+          }
+      }
     }
   }
 }
