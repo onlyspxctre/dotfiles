@@ -1,0 +1,18 @@
+{
+    "$schema": "https://pi.dev/schemas/models.schema.json",
+    "providers": {
+        "llama.cpp-direct": {
+            "baseUrl": "http://127.0.0.1:8080/v1",
+            "api": "openai-completions",
+            "apiKey": "none",
+            "models": [
+                {
+                    "id": "Qwen3.8-27B-Uncensored-Heretic-MTP-UD-IQ3_XXS",
+                    "properties": {
+                        "contextWindow": 131072
+                    }
+                }
+            ]
+        }
+    }
+}
