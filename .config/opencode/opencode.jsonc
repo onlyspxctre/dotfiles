@@ -15,10 +15,19 @@
         "baseURL": "http://127.0.0.1:8080/v1"
       },
       "models": {
+          "Swift-1.5-Qwen3.8-27B-GSQ-RCO-IQ3_S-mtp": {
+              "name": "Swift-1.5-Qwen3.8-27B-GSQ-RCO-IQ3_S",
+              "settings": {
+                  "reasoningEffort": "xhigh"
+              },
+              "limit": {
+                  "context": 64000
+              }
+          },
           "Qwen3.8-27B-Uncensored-Heretic-MTP-UD-IQ3_XXS": {
               "name": "Qwen3.8 27B-IQ3 (Uncensored-Heretic-UD-IQ3_XXS)",
               "settings": {
-                  "reasoningEffort": "medium"
+                  "reasoningEffort": "high"
               },
               "variants": [
                   {
@@ -41,7 +50,7 @@
                   }
               ],
               "limit": {
-                  "context": 32000
+                  "context": 131072
               }
           },
           "Qwen3.8-27B-Uncensored-Heretic-MTP-UD-IQ4_XS": {
@@ -70,7 +79,7 @@
                   }
               ],
               "limit": {
-                  "context": 32768
+                  "context": 48000
               }
           }
       }
