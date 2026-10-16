@@ -11,6 +11,12 @@
                     "properties": {
                         "contextWindow": 131072
                     }
+                },
+                {
+                    "id": "Swift-1.5-Qwen3.8-27B-GSQ-RCO-IQ3_XXS-mtp",
+                    "properties": {
+                        "contextWindow": 131072
+                    }
                 }
             ]
         }
