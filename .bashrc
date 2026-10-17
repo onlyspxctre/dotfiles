@@ -10,4 +10,3 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-[ -f "/home/spxctre/.ghcup/env" ] && . "/home/spxctre/.ghcup/env" # ghcup-env
