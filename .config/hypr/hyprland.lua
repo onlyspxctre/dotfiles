@@ -14,9 +14,11 @@ hl.monitor({
 --- VARIABLES ---
 -----------------
 
-local terminal = "footclient"
-local quickattach = "footclient -e tmux a -d || tmux new -d"
+-- local terminal = "footclient"
+local terminal = "ghostty +new-window"
 -- local terminal = "alacritty msg create-window"
+local terminal_daemon = "foot -s"
+local quickattach = "footclient -e tmux a -d || tmux new -d"
 local menu = "rofi -show run"
 local drun = "rofi -show drun"
 local grim = "grim -g \"$(slurp)\" - | swappy -f -"
@@ -40,6 +42,9 @@ hl.env("XDG_SESSION_DESKTOP", "Hyprland")
 
 hl.env("ANV_DEBUG", "video-decode,video-encode")
 
+-- temporary workaround for blurring GTK apps
+hl.env("GDK_WAYLAND_DISABLE", "ext_background_effect_manager_v1")
+
 hl.env("QT_AUTO_SCREEN_SCALE_FACTOR", "1")
 hl.env("QT_QPA_PLATFORM", "wayland;xcb")
 hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
@@ -50,7 +55,7 @@ hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
 
 hl.on("hyprland.start", function()
     hl.exec_cmd("dbus-update-activation-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_TYPE XDG_SESSION_DESKTOP")
-    hl.exec_cmd("foot -s")
+    hl.exec_cmd(terminal_daemon)
     hl.exec_cmd("waybar &")
     hl.exec_cmd("swaybg -i ~/Pictures/Backgrounds/winding_road_bg.jpg -m fill")
     hl.exec_cmd("hypridle")
