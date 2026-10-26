@@ -359,7 +359,7 @@ local mod = "SUPER"
 
 hl.bind(mod .. " + SHIFT_R", hl.dsp.exec_cmd(terminal))
 hl.bind(mod .. " + R", hl.dsp.exec_cmd(menu))
-hl.bind(mod .. " + SHIFT + RETURN", hl.dsp.exec_cmd(drun))
+hl.bind(mod .. " + Space", hl.dsp.exec_cmd(drun))
 hl.bind(mod .. " + SHIFT + S", hl.dsp.exec_cmd(grim))
 hl.bind(mod .. " + F", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mod .. " + SHIFT + F", hl.dsp.window.fullscreen({ action = "toggle" }))
