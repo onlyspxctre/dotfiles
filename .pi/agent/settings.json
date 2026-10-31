@@ -1,7 +1,9 @@
 {
   "lastChangelogVersion": "1.4.0",
   "packages": [
-    "npm:pi-free"
+    "npm:pi-free",
+    "npm:@narumitw/pi-usage",
+    "npm:pi-provider-kiro"
   ],
   "showHardwareCursor": true,
   "fullscreenWheelScrollLines": "auto",
