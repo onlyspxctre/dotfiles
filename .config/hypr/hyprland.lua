@@ -14,8 +14,8 @@ hl.monitor({
 --- VARIABLES ---
 -----------------
 
--- local terminal = "footclient"
-local terminal = "ghostty +new-window"
+local terminal = "footclient"
+-- local terminal = "ghostty +new-window"
 -- local terminal = "alacritty msg create-window"
 local terminal_daemon = "foot -s"
 local quickattach = "footclient -e tmux a -d || tmux new -d"
@@ -55,7 +55,7 @@ hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
 
 hl.on("hyprland.start", function()
     hl.exec_cmd("dbus-update-activation-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_TYPE XDG_SESSION_DESKTOP")
-    hl.exec_cmd(terminal_daemon)
+    -- hl.exec_cmd(terminal_daemon)
     hl.exec_cmd("waybar &")
     hl.exec_cmd("swaybg -i ~/Pictures/Backgrounds/winding_road_bg.jpg -m fill")
     hl.exec_cmd("hypridle")
