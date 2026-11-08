@@ -1,4 +1,3 @@
-
 ----------------
 --- MONITORS ---
 ----------------
@@ -8,6 +7,7 @@ hl.monitor({
     mode   = "preferred",
     position = "auto",
     scale = "auto",
+    supports_wide_color = -1,
 })
 
 -----------------
@@ -41,9 +41,6 @@ hl.env("XDG_SESSION_TYPE", "wayland")
 hl.env("XDG_SESSION_DESKTOP", "Hyprland")
 
 hl.env("ANV_DEBUG", "video-decode,video-encode")
-
--- temporary workaround for blurring GTK apps
-hl.env("GDK_WAYLAND_DISABLE", "ext_background_effect_manager_v1")
 
 hl.env("QT_AUTO_SCREEN_SCALE_FACTOR", "1")
 hl.env("QT_QPA_PLATFORM", "wayland;xcb")
